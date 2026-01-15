@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Allow Spring Boot resources
+!src/main/resources/
+!src/main/resources/**
