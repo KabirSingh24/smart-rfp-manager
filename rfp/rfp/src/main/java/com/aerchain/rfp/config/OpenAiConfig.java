@@ -16,8 +16,7 @@ public class OpenAiConfig {
     @Bean
     public WebClient openAiWebClient() {
         return WebClient.builder()
-//                .baseUrl("https://api.openai.com/v1")
-                .baseUrl("https://api.groq.com/openai/v1")
+                .baseUrl("${OPENAI_API}")
                 .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
